@@ -1,0 +1,13 @@
+<form>
+    <input ng-model="user.firstName" placeholder="Nombres: " type="text" name="firstName" required />
+    <input ng-model="user.lastName" placeholder = "Apellidos: " id="lastName" type="text" name="lastName" required />
+    <label for="birthDate">Fecha de nacimiento: </label>
+    <input ng-model="user.birthDate" id="birthDate" type="date" name="birthDate" required />
+    <input ng-model="user.email"  placeholder="Correo Electronico: " id="email" type="text" name="email" required />
+    <!-- opciones de documento de indentidad -->
+    <select ng-model = "user.idIdentificationType" ng-options = "idIdentificationType.description for idIdentificationType in idIdentificationTypes"></select>
+    <input ng-model="user.identificationNumber"  placeholder="Numero del documento de identificación" id="identificationNumberUser" type="number" name="identificationNumberUser" required />
+    <input type = "password" ng-model="user.password" placeholder="Contraseña" name="password" />
+    <!-- <input type = "password" ng-model="user.password" placeholder="Confirmar contraseña" name="password_confir" /> -->
+    <input type="submit" name="submit" ng-click="registrarUsuario()" />
+</form>

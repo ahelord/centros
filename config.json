@@ -1,0 +1,11 @@
+{
+  "express": {
+    "port":80
+  },
+  "postgres":{
+    "db"       : "centros_local",
+    "user"     : "admin_centros",
+    "password" : "fitpal",
+    "host"     : "localhost"
+  }
+}

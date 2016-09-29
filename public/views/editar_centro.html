@@ -1,0 +1,37 @@
+<form>
+<h1>editar información del centro </h1>
+    <input type="text" placeholder="Razón social" ng-model = "centro.tradeName">
+    <label for = "idIdentificationType">Tipo de indentificación </label>
+    <select name = "idIdentificationType" id = "idIdentificationType" 
+            ng-model = "centro.idIdentificationType" 
+            ng-options = "idIdentificationType.description disable 
+                when idIdentificationType.id_identification_type ==0 
+                        || idIdentificationType.id_identification_type ==1 
+                for idIdentificationType in idIdentificationTypes">
+    </select>
+    <input type="number" placeholder="Número de indentificación"   
+           ng-model = "centro.identificationNumber">
+    <label for = "codVerif">-</label>
+    <input type="number" placeholder="Código de Verificación"   
+           ng-model = "centro.codVerif" 
+           name = "codVerif" id = "codVerif">
+    <input type="text" placeholder="Email" ng-model = "centro.email">
+    <select name = "country" id = "country" 
+            ng-model = "centro.country" 
+            ng-options = "country.name for country in countries"
+    </select>
+    <textarea ng-model="centro.description" placeholder="descripción"></textarea>
+    <label for="startDateActivities">Fecha de inicio de actividades</label>
+    <input type="date" name = "startDateActivities" id = "startDateActivities" 
+           placeholder="Fecha de inicio Actividades" 
+           ng-model = "centro.startDateActivities">
+    <input type="text" placeholder="Número de empleados" ng-model = "centro.employeesNumber">
+    <input type="number" placeholder="Célular" ng-model = "centro.mobilePhone">
+    <input type="number" placeholder="Teléfono" ng-model = "centro.phone">
+    <input type="text" placeholder="Dirección" ng-model = "centro.address">
+    <input type="text" placeholder="Página Web" ng-model = "centro.web.url">
+    <input type="text" placeholder="Facebook " ng-model = "centro.web.facebook">
+    <input type="text" placeholder="Twitter" ng-model = "centro.web.twitter">
+    <input type="text" placeholder="Instagram" ng-model = "centro.web.instagram">
+    <input type="submit" name="submit" ng-click="registrarCentro()" />
+</form>
